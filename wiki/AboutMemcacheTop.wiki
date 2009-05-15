@@ -1,24 +1,17 @@
-#summary One-sentence summary of this page.
+#summary All about memcache-top, or whatever I could be bothered to write, anyways.
 
 = Introduction =
-
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
-
-
 
 I wanted a simple command-line tool to be able to grab real-time stats from memcache (memcached, I know, I know), and output it in a view something like top.  I couldn't find anything like it, so I wrote one myself in perl.
 
 When writing it, I tried to keep it simple, portable, and lightweight.  (No memcached perl modules required!  I tried to keep it to modules I thought would be preinstalled on almost any modern system.  It's also fairly polite - non-critical modules get checked, and if they aren't installed, the functionality is disabled without spewing errors or dying.)  I realize it's not written well.  But, hey, at least it exists, right?  Until the day I released it, there wasn't any comparable tool like it for memcached.
 
 It gives you the basic stats, and not too much else.  (You can specify thresholds, for instance, and it'll change color to red if you exceed the thresholds.  You can also choose the refresh/ sleep time, and whether to show immediate (per second) stats, or lifetime stats.  But it pretty much all revolves around those stats.)
+
+
+= Details =
+
+The best way to learn more about it is to see what it looks like!
 
 Here's some sample output:
 
@@ -115,5 +108,5 @@ TOTAL:			23.4GB		11.7K	10.0ms	50.5M	5.7T	7.6T
 Lifetime stats are pretty boring - unless the instances are relatively new, or doing a lot of traffic, they aren't going to update all that much with each run.  But hey, if you were curious, there you go.
 
 
-DISCLAIMER:
+=== DISCLAIMER ===
 This is not the best code in the world.  I make no warranties, promises, or guarantees that it will do anything, correct or incorrect.  It may very well kill you and your close relatives.  You've been warned.
